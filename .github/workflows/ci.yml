@@ -18,13 +18,12 @@ jobs:
         with:
           node-version: 22
 
-      - name: Force Failure
+      - name: Check node version 
         run: node --version
 
 
       - name: Install dependencies
         run: npm ci
 
-
-      - name: vite test
+      - name: Vite tests
         run: npm run test
