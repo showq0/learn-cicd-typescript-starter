@@ -19,11 +19,13 @@ jobs:
           node-version: 22
 
       - name: Check node version 
-        run: node --version
+        run:  |
+          node --version
+          npm --version
 
 
       - name: Install dependencies
         run: npm ci
 
       - name: Vite tests
-        run: npm run test
+        run: npm run test -- --coverage
