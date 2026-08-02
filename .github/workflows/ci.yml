@@ -29,3 +29,6 @@ jobs:
 
       - name: Vite tests
         run: npm run test -- --coverage
+  style:    
+      - name: Style
+        run : npm run format:check   
